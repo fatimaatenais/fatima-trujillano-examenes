@@ -36,7 +36,7 @@ def procesar_notas(estudiantes):
             mayor_prom = promedio
             mejor_estudiant = nombre
 
-    print("El estudiante que tuvo mayor promedio es: {} con {:.2f}".format(mejor_estudiant, mayor_prom))
+    print("El estudiante que tuvo mayor promedio es: {} con {}".format(mejor_estudiant, f"{mayor_prom:.2f}"))
     return resultado
 
 estudiantes = {"Almendra": [15, 10, 8], "Luana": [10, 9, 12], "Joaquin": [17, 16, 19]}
