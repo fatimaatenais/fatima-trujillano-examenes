@@ -28,20 +28,21 @@ def conteo(funcion):
             print("Debe haber más de un parámetro")
     return funcion_inter
 
-def alumnos(nombre, edad, hora, minuto, nota1, nota2, nota3, nota4):
+def alumnos(nombre, edad, nota1, nota2, nota3, nota4):
+    ahora = datetime.datetime.now()
+    hora = ahora.hour
+    minuto = ahora.minute
+
+
     promedio = (nota1 + nota2 + nota3 + nota4) / 4
     print("{} de {} años ha sido registrado a las {} horas con {} minutos".format(nombre, edad, hora, minuto))
     print("Promedio del estudiante:", promedio)
 
 nombre = input("Ingrese el nombre del alumno: ")
 edad = int(input("Ingrese la edad: "))
-
-hora = int(input("Ingrese la hora: "))
-minuto = int(input("Ingrese los minutos: "))
-
 nota1 = float(input("Ingrese nota 1: "))
 nota2 = float(input("Ingrese nota 2: "))
 nota3 = float(input("Ingrese nota 3: "))
 nota4 = float(input("Ingrese nota 4: "))
 
-alumnos(nombre, edad, hora, minuto, nota1, nota2, nota3, nota4)
+alumnos(nombre, edad,nota1, nota2, nota3, nota4)
